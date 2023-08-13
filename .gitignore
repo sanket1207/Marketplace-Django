@@ -1,0 +1,57 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env
+
+# Django settings and database files
+*.sqlite3
+*.db
+*.log
+*.pot
+*.pyc
+*.bak
+*.swp
+
+# Media and static files (usually uploaded by users)
+media/
+staticfiles/
+
+# Local development settings
+local_settings.py
+
+# Compiled Python bytecode
+*.pyc
+
+# Debugging logs
+logs/
+*.log
+
+# Site-specific files
+*.env
+
+# IDE settings
+.idea/
+
+# Mac OS files
+.DS_Store
+
+# Compiled C extensions
+*.so
+
+# Backup files
+*.bak
+*.backup
+
+# Environment variables file
+.env
+
+# Ignore pipenv virtual environment
+Pipfile
+Pipfile.lock
+
+# Ignore node.js related files if using npm
+node_modules/

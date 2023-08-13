@@ -1,0 +1,69 @@
+for django server 
+cmd:- py manage.py runserver
+
+
+# https://youtu.be/JxzZxdht-XY timestamp 1:04
+
+
+#url dispatching
+
+#1] add function in views.py
+
+def name_of_function(request):
+    return  HttpResponse("text") 
+
+#for add HttpResponse you have to add HttpResponse in below
+from django.shortcuts import render,HttpResponse
+
+#2] add path app_name(eg. home)/urls.py
+urlpatterns = [
+    path('', views.name_of_function,name='txt (eg. 'home'), # '' is default 
+    path('path_name(eg. 'contact')', views.name_of_function,name='txt' (eg. 'home'), # url/path_name 
+
+
+
+
+#To add static file in app
+# static file is file which can used show data publically
+#don't store any important file in this folder 
+
+#1] make a folder named as static 
+
+#2] Go to settings.py & add this 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR , "static")] 
+    #it tell program that take static DATA (data need for website) from static folder which is in base directory(BASE_DIR ) 
+
+#To add templates file in app
+# templates file is file which store html pages
+
+#1] make a folder named as templates 
+
+#2] Go to settings.py & add this os.path.join(BASE_DIR , "templates")
+in this variable 'DIR'
+'DIRS': [os.path.join(BASE_DIR , "templates")], #it tell program that take templates from templates folder which is in base folder 
+
+
+# How to add some text in html
+
+#1] {{name_of_variable}} in html were you want add content of variable
+
+#2] Go to views.py & add
+
+def index(name_of_variable_in_html):
+    name_of_variable (eg. context)= {
+        'name_of_variable_in_html' : 'text'
+    }   
+    return render(request, 'name_of_html',name_of_variable(eg. context)
+
+
+
+#template inheritance 
+we always want to some html same(like header & footer) for all the page so we use template inheritance
+
+
+
+
+
+
+
